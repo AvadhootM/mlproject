@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 # any input that is required or anything that we will requrie will be given through this data ingestion class (similar reason for transformation as well)
+@dataclass # this decorator makes you able to directly define your class varible inside a class, without needing to use __init__
 class DataIngestionConfig:
     # defining inputs to the data ingestion components, to know where to save train, test and raw data
     train_data_path: str=os.path.join('artifacts', "train.csv")
